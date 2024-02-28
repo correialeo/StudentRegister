@@ -26,7 +26,7 @@ public class StudentService {
         System.out.println("What is the course with this student make?");
         course = rgst.nextLine();
         studentDAO.include(new Student(name, rm, course));
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public void showListOfStudents(){
@@ -43,7 +43,7 @@ public class StudentService {
         if (removeRm.isBlank()){
             throw new ValidationException("Name not found");
         }
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public String changeStudent(){
@@ -55,7 +55,7 @@ public class StudentService {
         newName = rgst.nextLine();
         showListOfStudents();
         studentDAO.change(rm,newName);
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public String changeRmStudent(){
@@ -68,6 +68,6 @@ public class StudentService {
         studentDAO.changeRm(oldRm, newRm);
 
 //        showListOfStudents();
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 }

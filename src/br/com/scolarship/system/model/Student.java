@@ -33,19 +33,5 @@ public class Student {
     public void setCourse(String course) {
         this.course = course;
     }
-    /**
-     *
-     * METODOS - FAZEM ALGO E RETORNA OU NAO ALGO
-     *
-     * RETORNA: QUALQUER CLASSE OU VOID
-     * TIPOS DE CLASSES:
-     * STRING
-     * CONNECTION
-     * INTERGE
-     * DOUBLE
-     * FLOAT
-     * BOOLEAN = TRUE OU FALSE
-     *
-     * @return
-     */
+
 }

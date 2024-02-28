@@ -12,12 +12,12 @@ import java.util.List;
 
 public class StudentDAO {
 
-    ConnectionDAO connectionDAO = new ConnectionDAO();
+    static ConnectionDAO connectionDAO = new ConnectionDAO();
 
     public StudentDAO() {
     }
 
-    public String include(Student student){
+    public static String include(Student student){
         try{
             PreparedStatement statement = connectionDAO.getConnection().prepareStatement("INSERT INTO TAB_STUDENTS (NAME, RM, COURSE) VALUES (?,?,?)");
             statement.setString(1,student.getName());
@@ -28,7 +28,7 @@ public class StudentDAO {
             System.out.println(ex.getMessage());
         }
 
-        return "Sucessfuly";
+        return "Successfully!";
     }
 
     public String remove (String rm) {
@@ -40,7 +40,7 @@ public class StudentDAO {
             System.out.println(ex.getMessage());
         }
 
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public String change (String rm, String newName){
@@ -53,7 +53,7 @@ public class StudentDAO {
             System.out.println(ex.getMessage());
         }
 
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public String changeRm (String oldRm, String newRm) {
@@ -66,7 +66,7 @@ public class StudentDAO {
             System.out.println(ex.getMessage());
         }
 
-        return "Sucessfuly!";
+        return "Successfully!";
     }
 
     public List<Student> showAll ()  {
