@@ -26,7 +26,7 @@ public class ConnectionDAO {
     public Connection getConnection() {
         try{
         if (connection == null){
-            connection=  DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "RM556203", "080505");
+            connection=  DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL", "RMXXXXXX", "XXXXXX");
         }
         }catch (SQLException ex){
             System.out.println("ERRO NO BD");
